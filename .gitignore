@@ -1,0 +1,16 @@
+.envrc
+.terraformrc
+.bak
+.env
+
+.terraform
+
+
+.terraform.*
+
+*.tfstate
+*.tfstate.*
+
+terraform.tfvars
+
+data/

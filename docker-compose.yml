@@ -1,0 +1,17 @@
+services:
+  terraform:
+    container_name: terraform
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        - CONTAINER_USER=${CONTAINER_USER:-terraform}
+        - CONTAINER_UID=${CONTAINER_UID:-1000}
+        - CONTAINER_GIG=${CONTAINER_GID:-1000}
+    entrypoint: ["ash"]
+    tty: true
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/home/${CONTAINER_USER}/.config/gcloud/application_default_credentials.json
+    volumes:
+      - ./src/${PROJECT_NAME}:/terraform
+      - ./data/gcloud:/home/${CONTAINER_USER}/.config/gcloud
