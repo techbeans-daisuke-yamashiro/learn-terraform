@@ -1,5 +1,12 @@
+# CloudStorage + Cloud LoadBalancer + 独自ドメイン
 ## 事前準備
-### 作業用コンテナの用意
+### パラメータファイルの用意
+``` bash
+#サンプルのコピー後、デプロイ先に合わせて適宜修正してください
+$ cp terraform.tfvars.example terraform.tfvars
+
+```
+
 
 ### Compute Engine APIの有効化
 下記のAPIを有効化する必要があります。

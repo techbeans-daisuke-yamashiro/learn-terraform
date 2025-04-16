@@ -1,0 +1,8 @@
+# デプロイ先のプロジェクトID
+project_id="striking-optics-453603-h6"
+# デプロイ先のリージョン
+region = "ap-nortrheast1"
+# 静的サイトをデプロイするホスト/ドメイン名
+domain_name = "hostname.domain.tld"
+# 静的サイトをデプロイするホスト/ドメイン名を収容しているCloudDNSゾーン名
+dns_zone_name = "dns-zone-name"
